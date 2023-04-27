@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>写文章格式教程 | King の小窝</title>
+        <meta name="author" content="king" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <link rel="icon" href="/images/favicon.jpeg" />
+        <script src="https://cdn.staticfile.org/vue/3.2.47/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.3.0/css/all.min.css" />
+<link rel="stylesheet" href="/css/fonts.min.css" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+    <meta name="generator" content="Hexo 6.3.0"></head>
+    <body>
+        <div id="layout">
+            <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+            </transition>
+            <nav id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <div class="desktop-menu">
+        <a class="title" href="/">
+            <span>KING の小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;首页</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;关于</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;归档</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;分类</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;标签</span>
+        </a>
+        
+    </div>
+    <div id="mobile-menu">
+        <div class="curtain" @click="shouMenuItems = !shouMenuItems" v-show="shouMenuItems"></div>
+        <div class="title" @click="shouMenuItems = !shouMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;KING の小窝</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="shouMenuItems">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">首页</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">关于</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-bookmark fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">分类</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+
+            <transition name="into">
+            <div id="main" v-show="!loading">
+                <div class="article">
+    <div>
+        <h1>写文章格式教程</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/4/17
+        </span>
+        
+        <span class="category">
+            <a href="/categories/%E6%95%99%E7%A8%8B/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                教程
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E6%95%99%E7%A8%8B/" style="color: #03a9f4">教程</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/Markdown/" style="color: #00bcd4">Markdown</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p><span style="color:red">Hexo是一个基于Node.js的静态博客生成器，支持使用Markdown语法来撰写文章。以下是Hexo中Markdown语法的一些常用示例:</span></p>
+
+<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><p>使用#符号表示标题，#的数量表示标题的级别，最多支持6级标题。</p>
+<p>例如：</p>
+<pre><code># 一级标题
+## 二级标题
+### 三级标题
+</code></pre>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h1 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h1><p>使用*或_符号表示强调，一个符号表示斜体，两个符号表示加粗。</p>
+<p>例如：</p>
+<pre><code>*斜体*
+_斜体_
+**加粗**
+__加粗__
+</code></pre>
+<p><em>斜体</em><br><em>斜体</em><br><strong>加粗</strong><br><strong>加粗</strong></p>
+<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><p>使用-或*符号表示无序列表，数字加.表示有序列表。</p>
+<p>例如：</p>
+<pre><code>- 无序列表1
+- 无序列表2
+1. 有序列表1
+2. 有序列表2
+</code></pre>
+<ul>
+<li>无序列表1</li>
+<li>无序列表2</li>
+</ul>
+<ol>
+<li>有序列表1</li>
+<li>有序列表2</li>
+</ol>
+<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><p>使用链接名称表示链接。</p>
+<p>例如：</p>
+<pre><code>[Hexo官网](https://hexo.io)
+</code></pre>
+<p><a target="_blank" rel="noopener" href="https://hexo.io/">Hexo官网</a></p>
+<h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>使用表示插入图片。</p>
+<p>例如：</p>
+<pre><code>![Hexo官网截图](https://hexo.io/preview.png)
+</code></pre>
+<p><img src="https://hexo.io/preview.png" alt="Hexo官网截图"></p>
+<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><p>使用&gt;符号表示引用。</p>
+<p>例如：</p>
+<pre><code>&gt; 这是一段引用
+</code></pre>
+<blockquote>
+<p>这是一段引用</p>
+</blockquote>
+<h1 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h1><p>使用三个&#96;符号表示代码块。</p>
+<p>例如：</p>
+<pre><code>console.log(&#39;Hello Hexo!&#39;)
+</code></pre>
+<p>以上是Hexo中Markdown语法的一些常用示例。</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+                <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2023 -
+                2023
+                    King の小窝
+                        <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span> &commat;
+                        king
+        </div>
+        
+    </div>
+</footer>
+            </div>
+            </transition>
+            
+            <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+            </transition>
+            
+        </div>
+        <!-- 流星背景特效 -->
+        <canvas id="background" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -1"></canvas>
+        <script src="/js/background.min.js"></script>
+        <!-- 鼠标点击特效 -->
+        <canvas id="fireworks" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 32767"></canvas>
+        <script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
+        <script src="/js/fireworks.min.js"></script>
+        <script src="/js/main.js"></script>
+        
+        
+
+
+
+
+        
+    </body>
+</html>
